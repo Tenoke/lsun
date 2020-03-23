@@ -45,7 +45,7 @@ def export_images(db_path, out_dir, flat=False, limit=-1):
             if not exists(image_out_dir):
                 os.makedirs(image_out_dir)
             image_out_path = join(image_out_dir, str(key) + '.webp')
-            with open(image_out_path, 'w') as fp:
+            with open(image_out_path, 'wb') as fp:
                 fp.write(val)
             count += 1
             if count == limit:
